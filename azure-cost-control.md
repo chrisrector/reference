@@ -12,7 +12,7 @@ Even if you work for a company that uses Azure and you could technically experim
 
 ## Budgets and cost alerts
 
-Set budget alerts for your subscription. Unfortunately Microsoft does not let you set hard limits for pay-as-you-go subscriptions to automatically stop cost accumulation (you can see [here] (https://azure.microsoft.com/en-us/support/legal/offer-details/) for a list of subscription types that do support spending limits).
+Set budget alerts for your subscription. Unfortunately Microsoft does not let you set hard limits for pay-as-you-go subscriptions to automatically stop cost accumulation (you can see [here](https://azure.microsoft.com/en-us/support/legal/offer-details/) for a list of subscription types that do support spending limits).
 
 In my case I have a spending limit of $50, with two alerts set up that will go to my email address:
 
@@ -22,7 +22,7 @@ In my case I have a spending limit of $50, with two alerts set up that will go t
 
 Monitor and analyze your costs regularly using Cost Management. The cost analysis graph gives you a quick view of your current and predicted costs, along with a breakdown by resource, location, and resource group. You’ll want to check it more frequently when you first start out until you get comfortable with Azure so that you can act on any costs that are accumulating faster than you anticipated. After a few weeks you can check less frequently and rely more on the alerts you have configured.
 
-![cost mgmt] (azure-cost-mgmt.png)
+![cost mgmt](azure-cost-mgmt.png)
 
 ## Recommended VM types
 
@@ -38,13 +38,13 @@ Also note that not all VM types are available in all regions, so you may need to
 
 To avoid accidentally provisioning a beefy and expensive VM, configure a policy on your subscription to limit the available VM types. It may be unlikely that you’d choose a pricy VM, but this is simple to set up and ensures you keep to the VM types you can afford.
 
-![vm policy] (azure-vm-policy.png)
+![vm policy](azure-vm-policy.png)
 
 ## VM Auto Shutdown
 
 Configure your VMs to turn off at a set time each night, so they’ll turn off even if you forget to shut them down.
 
-![vm auto shutdown] (vm-auto-shutdown.png)
+![vm auto shutdown](vm-auto-shutdown.png)
 
 ## Grouping Resources for Easy Deletion
 
@@ -54,13 +54,13 @@ Use resource groups to group together resources in cases where you are doing a m
 
 The Azure Portal will default to premium SSD – select standard HDD instead to save a bit of cost.
 
-![hdd storage] (hdd-storage.png)
+![hdd storage](hdd-storage.png)
 
 ## Review Advisor Recommendations
 
 Check your cost recommendations in Advisor from time-to-time, although if you are using Azure intermittently you may not find these recommendations that useful. My sense is that Advisor works best when it has a good amount of relatively stable usage data to work with, which is likely not the case in a development or learning environment.
 
-![advisor] (azure-advisor.png)
+![advisor](azure-advisor.png)
 
 ## Things to Use Sparingly and Watch Closely
 
@@ -68,7 +68,7 @@ This is by no means an exhaustive list, but these are a few things I’ve noted 
 
 ### VPN gateways
 
-These are billed “based on the amount of time that gateway is provisioned and available” (see [here] (https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/) for the current pricing list). I did not read this carefully the first time and I assumed billing would be based on the amount of data I put through the gateway. The cheapest tier is estimated to cost 34 USD/month and so this can add up if you have it continuously available. I assume its creation and deletion can be scripted and this can help limit costs, but I haven’t got around to trying this.
+These are billed “based on the amount of time that gateway is provisioned and available” (see [here](https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/) for the current pricing list). I did not read this carefully the first time and I assumed billing would be based on the amount of data I put through the gateway. The cheapest tier is estimated to cost 34 USD/month and so this can add up if you have it continuously available. I assume its creation and deletion can be scripted and this can help limit costs, but I haven’t got around to trying this.
 
 ### Storage
 
